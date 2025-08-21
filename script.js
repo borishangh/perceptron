@@ -15,7 +15,7 @@ console.log(`dpr : ${dpr}`);
 
 function drawDot(x, y, d = 0, border = false) {
     ctx.beginPath();
-    ctx.arc(x, y, 5, 0, Math.PI * 2);
+    ctx.arc(x, y, 6, 0, Math.PI * 2);
     if (d == 1) ctx.fillStyle = "red";
     else if (d == -1) ctx.fillStyle = "blue";
     else ctx.fillStyle = "grey";
@@ -102,7 +102,7 @@ info_div.innerHTML = `epoch = ${epoch}, accuracy = ${accuracy(points, w_pred)}%`
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-async function animateUpdate(t = 0.5) {
+async function animateUpdate(t = 1) {
     const wait = t * 1000 / points.length;
 
     for (const point of points) {
