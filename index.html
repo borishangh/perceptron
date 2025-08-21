@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas{
+            border: 1px solid black;
+        }
+        body{
+            width: min(600px, 90vw);
+            margin: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Perceptron Demo</h1>
+    <p>Grey line indicates the actual decision boundary, solid line is the learned boundary, press "Update" to apply <a href="https://en.wikipedia.org/wiki/Perceptron" target="_blank">Perceptron</a> update rule.
+    </p>
+    <canvas id="canvas"></canvas>
+    <div class="controls">
+        <button onclick="animateUpdate()">Update</button>
+        <span id="info">epoch = 0; accuracy = 0</span>
+    </div>
+    <br>
+    <script src="script.js"></script>
+</body>
+</html>
